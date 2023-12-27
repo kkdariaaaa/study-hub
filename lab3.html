@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex; 
+        }
+
+         .sidebar{
+             width : 200px; 
+             background-color : #f9f9f9; 
+             padding : 10px; 
+         }
+
+         .videos{
+             flex-grow : 1; 
+             padding : 10px; 
+         }
+
+         .video{
+             max-width : calc(33.333% - 20px); 
+             margin-bottom : 20px; 
+         }
+
+          @media (max-width :800px){
+              .video{
+                  max-width : calc(50% - 10px);  
+              }
+          }
+
+           @media (max-width :500px){
+              .video{
+                  max-width :100%;  
+              }
+          } 
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Logo</div>
+
+    <nav>
+       <!-- Navigation items -->
+       <ul>   
+           <li>Home</li>   
+           <li>Trending</li>   
+           <li>Subscriptions</li>   
+       </ul>    
+   </nav>
+
+   <!-- User profile or sign in button -->
+   <div class="user-profile">User Profile</div>
+
+</header>
+
+<div class="content">
+
+     <!-- Sidebar with navigation links -->
+     <div class="sidebar">Sidebar Content Here...</div>
+
+     <!-- Main content area for videos -->
+     <div class="videos">
+         <div class="video">Video 1</div>
+         <div class="video">Video 2</div>
+         <div class="video">Video 3</div>
+         <div class="video">Video 4</div>
+         <div class="video">Video 5</div>
+         <div class="video">Video 6</div>
+         <div class="video">Video 7</div>
+         <div class="video">Video 8</div>
+         <div class="video">Video 9</div>
+         <div class="video">Video 10</div>
+         <div class="video">Video 11</div>
+         <div class="video">Video 12</div>
+     </div>
+
+</div>
+
+</body>
+</html>
