@@ -4,101 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Реєстрація</title>
-    <style>
-        /* Виділити перший елемент <li> та надати йому жирний шрифт */
-        li:first-child {
-            font-weight: bold;
-        }
-
-        /* Вибрати усі елементи <a>, які є останніми дочірніми елементами свого батька, і пофарбувати їх у червоний колір */
-        a:last-child {
-            color: red;
-        }
-
-        /* Вибрати усі елементи input, які вимкнено (disabled), і надати їм сірий фоновий колір */
-        input[disabled] {
-            background-color: grey;
-        }
-
-        /* Вибрати усі елементи <p>, які є прямими дочірніми елементами елемента <div>, і надати їм напівжирний шрифт */
-        div > p {
-            font-weight: bold;
-        }
-
-        /* Вибрати усі елементи, які мають атрибут href, що починається з https, і пофарбувати їх у зелений колір */
-        [href^="https"] {
-            color: green;
-        }
-
-        /* Вибрати усі елементи input, які мають атрибут type як text і обвести їх рамкою 1 піксель суцільним синім кольором */
-        input[type="text"] {
-            border: 1px solid blue;
-        }
-
-        /* Вибрати усі елементи <li>, які є першими або останніми дочірніми елементами батьківського елемента, і встановити для них розмір шрифту 24 пікселя */
-        li:first-child,
-        li:last-child {
-            font-size: 24px;
-        }
-
-        /* Вибрати усі елементи <p>, які є нащадками елемента <div> і встановити для них розмір шрифту 16 пікселів */
-        div p {
-            font-size: 16px;
-        }
-
-        /* Вибрати усі елементи <input> зі значенням checked, і надати їм фонового кольору світло-блакитний */
-        input:checked {
-            background-color: lightblue;
-        }
-
-        /* Виділити усі елементи <a>, які є прямими дочірніми елементами <li>, і підкреслити їх текстом */
-        li > a {
-            text-decoration: underline;
-        }
-
-        /* Виділити усі елементи <li>, які є парними елементами батьківського елемента, і надати їм жирний шрифт */
-        li:nth-child(even) {
-            font-weight: bold;
-        }
-
-        /* Вибрати усі елементи <input>, які мають атрибут типу text і не disabled, і надати їм фоновий колір сірого кольору */
-        input[type="text"]:not([disabled]) {
-            background-color: grey;
-        }
-
-        /* Вибрати усі елементи <p>, які є першими дочірніми елементами батьківського елемента, і встановіть для них розмір шрифту 24 пікселя */
-        :first-child > p {
-            font-size: 24px;
-        }
-
-        /* Виділити елемент <li>, який йде після елементу з класом .special і зробіть його перечеркнутим */
-        .special + li {
-            text-decoration: line-through;
-        }
-
-        /* Виділити першу літеру кожного елемента <p> і надати їй розмір шрифту 36 пікселів */
-        p::first-letter {
-            font-size: 36px;
-        }
-
-        /* Додати ::after для кожного елемента <a> та надати йому вміст */
-        a::after {
-            content: " [Посилання]";
-        }
-    </style>
 </head>
 <body>
 
     <!-- Посилання на сторінку зі списком лабораторних -->
-    <a href="список_лабораторних.html">Список лабораторних</a>
+    <a href="lab_list.html">Список лабораторних</a>
 
-    <!-- Форма для реєстрації -->
-    <form action="process_registration.php" method="post">
+    <!-- Форма реєстрації -->
+    <form action="https://webhook.site/your-unique-url" method="post">
+        <!-- Ім'я користувача -->
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required>
 
-        <!-- Ваші поля форми тут -->
+        <!-- Прізвище користувача -->
+        <label for="surname">Прізвище:</label>
+        <input type="text" id="surname" name="surname" required>
 
+        <!-- Адреса електронної пошти -->
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Пароль -->
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Підтвердження паролю -->
+        <label for="confirmPassword">Підтвердження паролю:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <!-- Дата народження -->
+        <label for="birthdate">Дата народження:</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+        <!-- Стать -->
+        <label for="gender">Стать:</label>
+        <select id="gender" name="gender">
+            <option value="male">Чоловік</option>
+            <option value="female">Жінка</option>
+            <option value="other">Інше</option>
+        </select>
+
+        <!-- Кнопка для відправки форми -->
+        <input type="submit" value="Зареєструватися">
     </form>
 
 </body>
 </html>
+
 
