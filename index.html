@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="uk">
+  <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="" method="post" class="registration-form">
-        <div class="form-field">
-            <input type="text" name="name" id="name" placeholder="Your name" required/>
-        </div>
-        <div class="form-field">
-            <input type="text" name="surname" id="surname" placeholder="Your surname" required/>
-        </div>
-        <div class="form-field">
-            <input type="number" name="name" id="number" placeholder="Your number" required/>
-        </div>
-        <div class="form-field push-down">
-            <input type="email" name="email" id="email" placeholder="Your email" required/>
-        </div>
-        <div class="form-field">
-            <input type="submit" value="Send">
-        </div>
+    <title>Лабораторна робота №1</title>
+  </head>
+  <body>
+    <h1>Лабораторна робота №1</h1>
+    <p>Ця лабораторна робота має на меті навчити вас створювати форми за допомогою HTML.</p>
+    <a href="index.html">Повернутися до списку лабораторних</a>
+    <form action="https://webhook.site/">
+      <div class="container">
+        <h2>Форма реєстрації</h2>
+        <label for="first_name">Ім'я:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Введіть ваше ім'я" required>
+        <label for="last_name">Прізвище:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Введіть ваше прізвище" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Введіть вашу електронну пошту" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Введіть ваш пароль" required>
+        <label for="password_confirm">Підтвердження паролю:</label>
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторіть ваш пароль" required>
+        <label for="birth_date">Дата народження:</label>
+        <input type="date" id="birth_date" name="birth_date" placeholder="Введіть вашу дату народження">
+        <label for="gender">Стать:</label>
+        <select id="gender" name="gender">
+          <option value="male">Чоловіча</option>
+          <option value="female">Жіноча</option>
+          <option value="other">Інша</option>
+        </select>
+        <input type="submit" value="Зареєструватися">
+      </div>
     </form>
-</body>
-</html>
+  </body>
+  </html>
